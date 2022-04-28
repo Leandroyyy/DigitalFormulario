@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Checkpoint</title>
+</h:head>
+
+<h:body style="background-color:#eee;">
+
+	<div class="card">
+		<h:form>
+			<p:tabMenu activeIndex="#{param.i}"  style="width: 25em; margin: 1em auto">
+				<p:menuitem value="Cadastrar" outcome="index.xhtml" icon="pi pi-fw pi-home">
+					<f:param name="i" value="0" />
+				</p:menuitem>
+				<p:menuitem value="Pessoas Cadastradas" icon="pi pi-fw pi-desktop">
+					<f:param name="i" value="1" />
+				</p:menuitem>
+			</p:tabMenu>
+		</h:form>
+	</div>
+	<div class="card">
+		<h:form>
+			<p:card style="width: 25em; margin: 1em auto">
+				
+			</p:card>
+		</h:form>
+	</div>
+
+
+
+</h:body>
+</html>

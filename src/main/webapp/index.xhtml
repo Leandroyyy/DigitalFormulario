@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Checkpoint</title>
+</h:head>
+
+<h:body style="background-color:#eee;">
+	<div class="card">
+		<h:form>
+			<p:tabMenu activeIndex="#{param.i}" style="width: 25em; margin: 1em auto">
+				<p:menuitem value="Cadastrar" icon="pi pi-fw pi-home">
+					<f:param name="i" value="0" />
+				</p:menuitem>
+				<p:menuitem value="Pessoas Cadastradas" outcome="people.xhtml" icon="pi pi-fw pi-desktop">
+					<f:param name="i" value="1" />
+				</p:menuitem>
+			</p:tabMenu>
+		</h:form>
+	</div>
+	<div class="card">
+
+		<h:form>
+			<p:card style="width: 25em; margin: 1em auto">
+				<span class="ui-float-label"> <p:inputText id="float-input"
+						value="#{setupBean.nome}" type="text" style="width:100%" /> <p:outputLabel
+						for="@previous" value="Username" />
+				</span>
+
+				<span class="ui-float-label" style="margin-top:1.5rem"> <p:inputText
+						id="float-input-email" value="" type="email" style="width:100%" />
+					<p:outputLabel for="@previous" value="Email" />
+				</span>
+
+				<div class="p-field p-col-12 p-md-4">
+					<span class="ui-float-label" style="margin-top:1.5rem"> <p:inputMask id="date"
+							value="#{maskView.date}" mask="99/99/9999" style="width:100%" />
+						<p:outputLabel for="@previous" value="Date" />
+					</span>
+				</div>
+
+				<span class="ui-float-label" style="margin-top:1.5rem"> <p:password id="feedback"
+						value="ddd" feedback="true" style="width:100%" /> <p:outputLabel
+						for="@previous" value="Password" />
+				</span>
+				
+				<f:facet name="footer">
+					<p:commandButton icon="pi pi-check" value="Save"
+						 />
+					<p:commandButton icon="pi pi-times" value="Cancel"
+						styleClass="ui-button-secondary" style="margin-left: .5em" />
+				</f:facet>
+			</p:card>
+		</h:form>
+	</div>
+</h:body>
+</html>
