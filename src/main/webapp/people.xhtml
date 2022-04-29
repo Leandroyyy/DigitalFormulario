@@ -25,9 +25,29 @@
 	</div>
 	<div class="card">
 		<h:form>
-			<p:card style="width: 25em; margin: 1em auto">
-				
-			</p:card>
+		    <div class="card">
+		        <p:dataTable var="setup" value="#{setupBean.list}">
+		            <p:column headerText="Id">
+		                <h:outputText value="#{setup.id}" />
+		            </p:column>
+		
+		            <p:column headerText="Name">
+		                <h:outputText value="#{setup.name}" />
+		            </p:column>
+		
+		            <p:column headerText="Description">
+		                <h:outputText value="#{setup.email}" />
+		            </p:column>
+		
+		            <p:column headerText="Birth">
+		                <h:outputText value="#{setup.birth}" />
+		            </p:column>
+		            
+		            <p:column headerText="Password">
+		                <h:outputText value="#{setup.password}" />
+		            </p:column>
+		        </p:dataTable>
+		    </div>
 		</h:form>
 	</div>
 

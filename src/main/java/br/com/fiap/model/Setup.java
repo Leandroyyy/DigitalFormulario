@@ -1,4 +1,4 @@
-package br.com.fiap.entity;
+package br.com.fiap.model;
 
 import java.util.Date;
 
@@ -9,13 +9,12 @@ import javax.persistence.Id;
 
 @Entity
 public class Setup {
-
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String name = "leandro";
+	private String name;
 	
 	private String email;
 	
@@ -23,16 +22,6 @@ public class Setup {
 	
 	private String password;
 
-	public Setup() {
-		super();
-	}
-
-	public Setup(String name, String email, Date birth, String password) {
-		this.name = name;
-		this.email = email;
-		this.birth = birth;
-		this.password = password;
-	}
 
 	public Long getId() {
 		return id;
